@@ -93,12 +93,32 @@ button{
     border-radius: 40px;
 }
 
+/* Filter buttons: All / Active / Completed */
+.filters{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn{
+    padding: 8px 18px;
+    background: #edeef0;
+    color: #555;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.filter-btn.active{
+    background: #ff5945;
+    color: #fff;
+}
+
 ul li{
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 70px 12px 50px;
     user-select: none;
-    cursor: pointer;
     position: relative;
 }
 ul li::before{
@@ -118,8 +138,10 @@ ul li::before{
 
 ul li.checked{
     color: #555;
-    text-decoration: line-through;
+}
 
+ul li.checked .task-text{
+    text-decoration: line-through;
 }
 
 ul li.checked::before {
@@ -127,18 +149,50 @@ ul li.checked::before {
 
 
 }
-ul li span{
+
+.task-text{
+    cursor: pointer;
+}
+
+/* Edit + delete action icons */
+.task-actions{
     position: absolute;
     right: 0;
     top: 5px;
-    width: 40px;
+    display: flex;
+}
+
+.edit-btn,
+.delete-btn{
+    width: 36px;
     height: 40px;
-    font-size: 22px;
+    font-size: 18px;
     color: #555;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
 }
-ul li span:hover{
+
+.edit-btn:hover,
+.delete-btn:hover{
     background: #edeef0;
+}
+
+/* Inline edit input replaces the li content while editing */
+.edit-input{
+    width: calc(100% - 60px);
+    font-size: 17px;
+    padding: 6px 8px;
+    border: 1px solid #ff5945;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Task counter / progress */
+.task-counter{
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
 }

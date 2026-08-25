@@ -16,10 +16,7 @@
             <div class="welcome">
     <h3 id="greeting">👋 Welcome!</h3>
 
-    <p id="quote">
-        Success doesn't come from what you do occasionally,
-        it comes from what you do consistently.
-    </p>
+    <p id="quote"></p>
 
     <div class="datetime">
         <span id="date"></span>
@@ -32,13 +29,19 @@
             <button onclick="addTask()">Add</button>
         </div>
 
-        <ul id="list-container">
-            <!-- <li class="checked">Task 1</li>
-            <li>Task2</li>
-            <li>Task 3</li> -->
+        <!-- Filter buttons: All / Active / Completed -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
 
+        <ul id="list-container">
         </ul>
-        
+
+        <!-- Task counter / progress -->
+        <p id="task-counter" class="task-counter"></p>
+
         </div>
     </div>
 
