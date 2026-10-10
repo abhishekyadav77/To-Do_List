@@ -224,7 +224,7 @@ GitHub:
 https://github.com/abhishekyadav77
 
 LinkedIn:
-https://www.linkedin.com/in/abhishek-kumar-yadav-219950285/
+https://www.linkedin.com/in/abhishekyadav77a/
 
 ---
 
